@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitMenuButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="1153.0" prefWidth="1365.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.LabMovix.Movix.client.Controller">
+   <center>
+      <AnchorPane prefHeight="1153.0" prefWidth="1600.0" style="-fx-background-color: #340e36;" BorderPane.alignment="CENTER">
+         <children>
+            <ScrollPane fx:id="pan4" prefHeight="743.0" prefWidth="1258.0" style="-fx-background-color: #340e36;" visible="false">
+               <content>
+                    <AnchorPane onMouseEntered="#Iniciar" prefHeight="1149.0" prefWidth="1241.0" style="-fx-background-color: #340e36;">
+                        <children>
+                            <Text fill="#d3a028" layoutX="598.0" layoutY="115.0" scaleX="4.0" scaleY="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MoViX♣" />
+                        <TextField layoutX="545.0" layoutY="53.0" promptText="Search" style="-fx-text-fill: white;" />
+                        <ImageView fitHeight="37.0" fitWidth="36.0" layoutX="14.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true" style="visibility: white;">
+                           <image>
+                              <Image url="@../../../../../../../../../../../Downloads/IMG_20190203_164728.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="19.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Perfil" />
+                        <SplitMenuButton layoutX="1153.0" layoutY="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="74.0" text="Filtros">
+                          <items>
+                            <MenuItem mnemonicParsing="false" text="Action 1" />
+                            <MenuItem mnemonicParsing="false" text="Action 2" />
+                          </items>
+                        </SplitMenuButton>
+                        <AnchorPane fx:id="infoview" layoutX="38.0" layoutY="725.0" prefHeight="467.0" prefWidth="1014.0" style="-fx-background-color: #200e30;">
+                           <children>
+                              <AnchorPane layoutY="36.0" prefHeight="593.0" prefWidth="1159.0" style="-fx-background-color: #200e30;">
+                                 <children>
+                                    <TabPane layoutX="21.0" layoutY="5.0" prefHeight="576.0" prefWidth="566.0" style="-fx-background-color: white;" tabClosingPolicy="UNAVAILABLE">
+                                      <tabs>
+                                        <Tab text="Descripcion" />
+                                        <Tab text="Reseñas" />
+                                          <Tab text="Informacion">
+                                            <content>
+                                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                                            </content>
+                                          </Tab>
+                                      </tabs>
+                                    </TabPane>
+                                    <MediaView fitHeight="200.0" fitWidth="200.0" layoutX="787.0" layoutY="69.0" scaleX="2.4" />
+                                    <Button layoutX="828.0" layoutY="403.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="118.0" text="Comprar" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <TextField layoutX="57.0" layoutY="221.0" onMouseEntered="#mostarInfo" prefHeight="456.0" prefWidth="1126.0" promptText="Search" style="-fx-text-fill: white;" text="pelicula" />
+                        <Text fill="#917d0f" layoutX="608.0" layoutY="707.0" strokeType="OUTSIDE" strokeWidth="0.0" text="INFORMACION ↓ ">
+                           <font>
+                              <Font name="Yu Gothic UI Semilight" size="12.0" />
+                           </font>
+                        </Text>
+                        </children>
+                    </AnchorPane>
+               </content>
+            </ScrollPane>
+            <AnchorPane fx:id="pan5" onMouseEntered="#Creadas" prefHeight="653.0" prefWidth="1262.0" style="-fx-background-color: #340e36;" visible="false">
+               <children>
+                  <Text fill="#d3a028" layoutX="584.0" layoutY="124.0" scaleX="4.0" scaleY="4.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Peliculas Creadas" />
+                  <JFXTextArea fx:id="pantallaPeliculas" layoutX="399.0" layoutY="184.0" style="-fx-background-color: #ffffff;" />
+                  <Button fx:id="consultarPeliculas" layoutX="597.0" layoutY="392.0" mnemonicParsing="false" onMouseClicked="#listarPeliculas" text="Consultar" />
+               </children>
+            </AnchorPane>
+              <AnchorPane fx:id="pan1" prefHeight="677.0" prefWidth="1259.0" style="-fx-background-color: #340e36;">
+               <children>
+                      <Text fill="#d3a028" focusTraversable="true" fontSmoothingType="LCD" layoutX="606.0" layoutY="143.0" scaleX="6.0" scaleY="6.0" strokeLineCap="BUTT" strokeLineJoin="ROUND" strokeType="OUTSIDE" strokeWidth="0.0" text="MoViX♣" underline="true">
+                          <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                          </cursor>
+                          <effect>
+                              <BoxBlur width="9.11" />
+                          </effect>
+                      </Text>
+                      <JFXTextField focusColor="#978418" labelFloat="true" layoutX="519.0" layoutY="214.0" prefHeight="26.0" prefWidth="221.0" promptText="cedula" style="-fx-text-fill: white;" unFocusColor="#978418" />
+                      <Button layoutX="539.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#Iniciar" prefHeight="30.0" prefWidth="56.0" style="-fx-background-color: #340e30; -fx-text-fill: #978418;" text="Iniciar">
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                  </Button>
+                      <Button layoutX="595.0" layoutY="295.0" mnemonicParsing="false" onMouseClicked="#Iniciar" onMousePressed="#Iniciar" prefHeight="32.0" prefWidth="145.0" style="-fx-background-color: #340e30; -fx-text-fill: #978418;" text="Iniciar sin Registrarse">
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                  </Button>
+                      <Text fill="#340e40" layoutX="606.0" layoutY="147.0" scaleX="6.0" scaleY="6.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MoViX♣" />
+                      <Separator layoutX="616.0" layoutY="333.0" orientation="VERTICAL" prefHeight="11.0" prefWidth="0.0" />
+                      <Hyperlink layoutX="620.0" layoutY="327.0" text="Olvido su contraseña" />
+                      <Hyperlink layoutX="548.0" layoutY="327.0" text="Registrarse" />
+                      <JFXPasswordField focusColor="#978418" labelFloat="true" layoutX="519.0" layoutY="258.0" prefHeight="25.0" prefWidth="221.0" promptText="contraseña" style="-fx-text-fill: white;" unFocusColor="#978418" />
+                  <AnchorPane layoutY="637.0" prefHeight="16.0" prefWidth="714.0" style="-fx-background-color: #340e36;" />
+               </children>
+              </AnchorPane>
+              <AnchorPane fx:id="pan2" onMouseEntered="#Pelicula" prefHeight="640.0" prefWidth="1261.0" style="-fx-background-color: #340e36;" visible="false">
+                  <children>
+                      <JFXTextField fx:id="tituloPelicula" focusColor="#8e9300" labelFloat="true" layoutX="460.0" layoutY="46.0" prefHeight="26.0" prefWidth="87.0" promptText="titulo" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+                      <JFXTextField fx:id="duracionPelicula" focusColor="#8e9300" labelFloat="true" layoutX="460.0" layoutY="83.0" prefHeight="26.0" prefWidth="87.0" promptText="duracion" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+                      <JFXTextField fx:id="edadminPelicula" focusColor="#8e9300" labelFloat="true" layoutX="460.0" layoutY="161.0" prefHeight="26.0" prefWidth="87.0" promptText="edad minima" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+                      <JFXTextField fx:id="directorPelicula" focusColor="#8e9300" labelFloat="true" layoutX="460.0" layoutY="307.0" prefHeight="26.0" prefWidth="87.0" promptText="director" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+                      <JFXTextField fx:id="actoresPelicula" focusColor="#8e9300" labelFloat="true" layoutX="460.0" layoutY="267.0" prefHeight="26.0" prefWidth="87.0" promptText="actores" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+                      <RadioButton fx:id="dosdPelicula" layoutX="582.0" layoutY="51.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="115.0" text="2D" textFill="WHITE" />
+                      <RadioButton fx:id="tresdpelicula" layoutX="582.0" layoutY="83.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="115.0" text="3D" textFill="WHITE" />
+                      <RadioButton fx:id="cuatrodPelicula" layoutX="582.0" layoutY="119.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="115.0" text="4D" textFill="WHITE" />
+                      <TextArea fx:id="descripcionPelicula" layoutX="709.0" layoutY="45.0" prefHeight="295.0" prefWidth="526.0" promptText="descripcion" />
+                      <DatePicker fx:id="estrenoPelicula" layoutX="460.0" layoutY="195.0" prefHeight="18.0" prefWidth="87.0" promptText="estreno" />
+                      <DatePicker fx:id="limitePelicula" layoutX="460.0" layoutY="231.0" prefHeight="18.0" prefWidth="87.0" promptText="limite" />
+                      <AnchorPane fx:id="imagenPelicula" accessibleRole="IMAGE_VIEW" layoutX="14.0" layoutY="52.0" prefHeight="286.0" prefWidth="430.0" style="-fx-background-color: #ffffff;">
+                          <children>
+                              <Label layoutX="192.0" layoutY="134.0" prefHeight="18.0" prefWidth="47.0" style="-fx-background-color: fffffffffffff;" text="imagen" wrapText="true" />
+                          </children>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </AnchorPane>
+                      <AnchorPane fx:id="videoPelicula" accessibleRole="BUTTON" layoutX="708.0" layoutY="363.0" prefHeight="196.0" prefWidth="527.0" style="-fx-background-color: #ffffff;">
+                          <children>
+                              <Label layoutX="246.0" layoutY="89.0" prefHeight="18.0" prefWidth="36.0" style="-fx-background-color: fffffffffffff;" text="video" wrapText="true" />
+                          </children>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </AnchorPane>
+                      <TextArea fx:id="infoPelicula" layoutX="574.0" layoutY="154.0" prefHeight="182.0" prefWidth="120.0" promptText="información" />
+                      <Button layoutX="14.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#crearPelicula" prefHeight="57.0" prefWidth="684.0" style="-fx-background-color: #200e30;" text="crear pelicula" textFill="WHITE">
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </Button>
+                  <MenuButton layoutX="460.0" layoutY="123.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="genero">
+                    <items>
+                      <MenuItem mnemonicParsing="false" text="Action 1" />
+                      <MenuItem mnemonicParsing="false" text="Action 2" />
+                    </items>
+                  </MenuButton>
+                  </children>
+              </AnchorPane>
+              <AnchorPane fx:id="pan3" onMouseEntered="#Sala" prefHeight="640.0" prefWidth="1263.0" style="-fx-background-color: #340e36;" visible="false">
+                  <children>
+                      <JFXTextField focusColor="#8e9300" labelFloat="true" layoutX="102.0" layoutY="55.0" prefHeight="26.0" prefWidth="87.0" promptText="nombre" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+                      <JFXTextField focusColor="#8e9300" labelFloat="true" layoutX="208.0" layoutY="55.0" prefHeight="26.0" prefWidth="87.0" promptText="id" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+                      <JFXTextField focusColor="#8e9300" labelFloat="true" layoutX="425.0" layoutY="55.0" prefHeight="26.0" prefWidth="87.0" promptText="capacidad" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+                      <RadioButton layoutX="531.0" layoutY="73.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="115.0" text="2D" textFill="WHITE" />
+                      <RadioButton layoutX="582.0" layoutY="73.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="115.0" text="3D" textFill="WHITE" />
+                      <RadioButton layoutX="630.0" layoutY="73.0" mnemonicParsing="false" prefHeight="0.0" prefWidth="115.0" text="4D" textFill="WHITE" />
+                      <TextArea layoutX="102.0" layoutY="100.0" prefHeight="182.0" prefWidth="566.0" promptText="información" />
+                      <Button layoutX="311.0" layoutY="320.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="104.0" style="-fx-background-color: #ffffff;" text="crear sala">
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                          <font>
+                              <Font name="Arial" size="13.0" />
+                          </font>
+                      </Button>
+                      <JFXTextField focusColor="#8e9300" labelFloat="true" layoutX="319.0" layoutY="55.0" prefHeight="26.0" prefWidth="87.0" promptText="cine" style="-fx-text-fill: white;" unFocusColor="WHITE" />
+                  <AnchorPane layoutX="732.0" layoutY="100.0" prefHeight="501.0" prefWidth="492.0" style="-fx-background-color: white;">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="5.0" prefHeight="7.0" prefWidth="467.0" style="-fx-background-color: black;" />
+                        <Text layoutX="236.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pantalla" />
+                     </children>
+                  </AnchorPane>
+                  <Text fill="WHITE" layoutX="818.0" layoutY="76.0" scaleX="3.0" scaleY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Forma de la sala" />
+                  </children>
+              </AnchorPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <left>
+      <AnchorPane prefHeight="646.0" prefWidth="66.0" style="-fx-background-color: #340e36;" BorderPane.alignment="CENTER">
+         <children>
+              <AnchorPane fx:id="panbarra" onMouseEntered="#MenuAgrandado" prefHeight="1153.0" prefWidth="50.0" style="-fx-background-color: #200e30;" visible="false">
+                  <children>
+                      <ImageView fx:id="menub" layoutX="2.0" layoutY="14.0" onMouseClicked="#Iniciar" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../../../../images/icons8_menu_32px.png" />
+                          </image>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </ImageView>
+                      <ImageView fx:id="peliculab" accessibleRole="DECREMENT_BUTTON" fitHeight="32.0" fitWidth="32.0" layoutX="4.0" layoutY="53.0" onMouseClicked="#Pelicula" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../../../../images/icons8_movie_projector_32px.png" />
+                          </image>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </ImageView>
+                      <ImageView fx:id="salab" fitHeight="32.0" fitWidth="32.0" layoutX="4.0" layoutY="97.0" onMouseClicked="#Sala" pickOnBounds="true" preserveRatio="true">
+                          <image>
+                              <Image url="@../../../../images/icons8_barber_chair_32px.png" />
+                          </image>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </ImageView>
+                  <ImageView fx:id="peliculasCreadasb" fitHeight="26.0" fitWidth="32.0" layoutX="6.0" layoutY="145.0" onMouseClicked="#Creadas" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../images/film_26px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  </children>
+              </AnchorPane>
+              <AnchorPane fx:id="panbarra1" layoutX="48.0" onMouseEntered="#MenuAgrandado" prefHeight="1153.0" prefWidth="61.0" style="-fx-background-color: #200e30;" visible="false">
+                  <children>
+                      <Text fill="WHITE" layoutX="4.0" layoutY="33.0" onMouseClicked="#Iniciar" strokeType="OUTSIDE" strokeWidth="0.0" text="Menu" wrappingWidth="46.99998405575752">
+                          <font>
+                              <Font size="14.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </Text>
+                      <Text fill="WHITE" layoutX="6.0" layoutY="61.0" onMouseClicked="#Pelicula" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear pelicula" wrappingWidth="54.99998405575752">
+                          <font>
+                              <Font size="14.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </Text>
+                      <Text fill="WHITE" layoutX="4.0" layoutY="107.0" onMouseClicked="#Sala" strokeType="OUTSIDE" strokeWidth="0.0" text="Crear sala" wrappingWidth="46.99998405575752">
+                          <font>
+                              <Font size="14.0" />
+                          </font>
+                          <cursor>
+                              <Cursor fx:constant="HAND" />
+                          </cursor>
+                      </Text>
+                  <Text fx:id="peliculasCreadas1" fill="WHITE" layoutX="3.0" layoutY="153.0" onMouseClicked="#Creadas" strokeType="OUTSIDE" strokeWidth="0.0" text="Peliculas Creadas" wrappingWidth="54.99997639656067">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Text>
+                  </children>
+              </AnchorPane>
+         </children>
+      </AnchorPane>
+   </left>
+</BorderPane>
